@@ -15,7 +15,6 @@ import SignupForm from "./components/SignupForm";
 
 export default function page() {
   return (
-    
     <div className="w-screen h-screen flex justify-center items-center">
       <Tabs defaultValue="login" className="w-[400px]">
         <TabsList className="grid w-full grid-cols-2">
