@@ -60,6 +60,8 @@ const rooms = [
   },
 ];
 
+const Roomies = []
+
 
 const page = () => {
   const [selectedRoom, setSelectedRoom] = useState<number | undefined>(
