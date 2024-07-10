@@ -8,7 +8,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "",
+        hostname: "i.pinimg.com",
       },
     ],
   },
