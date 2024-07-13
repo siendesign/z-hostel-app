@@ -13,9 +13,13 @@ import { Button } from "@/components/ui/button"
 interface User {
   id: number
   name: string
-  email: string
-  role: string
-  avatarUrl?: string
+  image: string
+  qualities: string
+  room: any,
+  gender: string,
+  school: string,
+  program: string,
+  level: string,
 }
 
 interface UserCardProps {
@@ -25,26 +29,27 @@ interface UserCardProps {
 const UserCard: React.FC<UserCardProps> = ({ user }) => {
   return (
     <Card className="w-[350px]">
+        {JSON.stringify(user)}
       <CardHeader>
         <div className="flex items-center space-x-4">
           <Avatar>
-            <AvatarImage src={user.avatarUrl} alt={user.name} />
+            <AvatarImage src={user?.image} alt={user.name} />
             <AvatarFallback>{user.name.charAt(0)}</AvatarFallback>
           </Avatar>
           <div>
             <CardTitle>{user.name}</CardTitle>
-            <CardDescription>{user.role}</CardDescription>
+            <CardDescription>{user.school}</CardDescription>
           </div>
         </div>
       </CardHeader>
       <CardContent>
-        <p className="text-sm text-gray-600">Email: {user.email}</p>
+        <p className="text-sm text-gray-600">{user.school}</p>
         {/* Add more user details here as needed */}
       </CardContent>
-      <CardFooter className="flex justify-between">
+      {/* <CardFooter className="flex justify-between">
         <Button variant="outline">Edit Profile</Button>
         <Button>View Details</Button>
-      </CardFooter>
+      </CardFooter> */}
     </Card>
   )
 }
