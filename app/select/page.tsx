@@ -179,7 +179,7 @@ const page = () => {
                     </span>{" "}
                   </h3>
                   <div className="">
-                    <p className="text-sm text-green-600 font-normal">
+                    <p className="text-sm text-green-600 font-normal ">
                       {selectedRoomData?.room_status!}
                     </p>
                     <p className="text-sm text-gray-500 font-normal text-end">
